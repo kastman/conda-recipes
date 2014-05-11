@@ -1,0 +1,107 @@
+package:
+  name: psychopy
+  version: "1.80.04dev"
+
+source:
+    # git_url: https://github.com/psychopy/psychopy
+    git_url: https://github.com/dschreij/psychopy.git
+    git_tag: pyglet-1.2alpha1
+
+build:
+    number: 0
+    script: python setup.py install
+
+requirements:
+    build:
+        - python
+        - numpy
+        - scipy
+        - matplotlib
+        - wxpython
+        - setuptools
+        - pyopengl
+        - lxml
+        - openpyxl
+        - ipython
+        - sphinx
+        - nose
+        - cython
+        - hdf5
+        - greenlet
+        - gevent
+        - pyyaml
+        - msgpack-python
+        
+        - pyglet1.2 1.2alpha1
+        - pyobjc-core
+        - pyobjc-framework-qtkit
+        - bdist_mpkg
+        - pyserial
+        - iolabs
+        - pyxid
+        - py2app
+
+        - labjackpython
+        - portaudio
+        
+        # IOHub
+        # - pyobjc
+        - psutil
+        - pytables
+        - numexpr
+        - pil
+        # - parallel
+        
+        
+    run:
+        - python
+        - numpy
+        - scipy
+        - matplotlib
+        - wxpython
+        - setuptools
+        - pyopengl
+        - lxml
+        - openpyxl
+        - ipython
+        - sphinx
+        - nose
+        - cython
+        - hdf5
+        - greenlet
+        - gevent
+        - pyyaml
+        - msgpack-python
+        
+        - pyglet
+        - pyobjc-core
+        - pyobjc-framework-qtkit
+        - bdist_mpkg
+        - pyserial
+        - iolabs
+        - pyxid
+        - py2app
+
+        - labjackpython
+        - portaudio
+        
+        # IOHub
+        # - pyobjc
+        - psutil
+        - pytables
+        - numexpr
+        - pil
+        
+        # - parallel
+
+test:
+    # Python imports
+    imports:
+        - psychopy
+    requires:
+        - pytest
+
+about:
+    home: http://www.psychopy.org
+    license: GPL3
+    summary: For running psychology and neuroscience experiments

@@ -1,0 +1,23 @@
+package:
+  name: pyobjc
+  version: "2.5.1"
+
+source:
+    git_url: 
+    git_tag: 
+    md5: 
+
+build:
+    number: 0
+    script: python setup.py install
+
+requirements:
+    build:
+        - python
+
+    run:
+        - python
+
+about:
+    home: http://labjack.com/support/labjackpython
+    summary: Python module for communicating with the LabJack U3/U6/UE9/U12.

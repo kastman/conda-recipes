@@ -1,0 +1,23 @@
+package:
+  name: labjackpython
+  version: "10222012"
+
+source:
+    git_url: https://github.com/labjack/LabJackPython
+    git_tag: "10-22-2012"
+    md5: b72b65c5a0b86b569963e7372aa9ba43
+
+build:
+    number: 0
+    script: python setup.py install
+
+requirements:
+    build:
+        - python
+
+    run:
+        - python
+
+about:
+    home: http://labjack.com/support/labjackpython
+    summary: Python module for communicating with the LabJack U3/U6/UE9/U12.

@@ -1,0 +1,30 @@
+package:
+  name: py2app
+  version: "0.8"
+
+source:
+    fn: py2ap-0.8.tar.gz
+    url: https://pypi.python.org/packages/source/p/py2app/py2app-0.8.tar.gz
+    md5: b72b65c5a0b86b569963e7372aa9ba43
+
+build:
+    number: 0
+    script: python setup.py install
+
+    
+requirements:
+    build:
+        - python
+        - macholib
+        - altgraph
+        - modulegraph
+
+    run:
+        - python
+        - macholib
+        - altgraph
+        - modulegraph
+
+about:
+    home: http://pythonhosted.org/py2app/
+    summary: Make standalone application bundles and plugins from Python scripts

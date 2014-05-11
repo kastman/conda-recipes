@@ -1,0 +1,29 @@
+package:
+  name: pyglet1.2
+  version: "1.2alpha1"
+
+source:
+    fn: pyglet-1.2alpha1.zip
+    url: https://pyglet.googlecode.com/files/pyglet-1.2alpha1.zip
+    md5: 637c74d33cf8c76b60e9e68dca6a0795
+
+build:
+    number: 1
+    script: python setup.py install
+
+requirements:
+    build:
+        - python
+
+    run:
+        - python
+
+test:
+    imports:
+        - pyglet
+    # commands:
+    #     - tests/test.py
+
+about:
+    home: http://www.pyglet.org/
+    summary: a cross-platform windowing and multimedia library for Python.
