@@ -1,6 +1,6 @@
 package:
   name: psychopy
-  version: "1.80.04dev"
+  version: "1.80.01dev"
 
 source:
     # git_url: https://github.com/psychopy/psychopy
@@ -30,7 +30,7 @@ requirements:
         - greenlet
         - gevent
         - pyyaml
-        - msgpack-python
+        # - msgpack-python
         
         - pyglet1.2 1.2alpha1
         - pyobjc-core
@@ -59,7 +59,6 @@ requirements:
         - scipy
         - matplotlib
         - wxpython
-        - setuptools
         - pyopengl
         - lxml
         - openpyxl
@@ -71,9 +70,9 @@ requirements:
         - greenlet
         - gevent
         - pyyaml
-        - msgpack-python
+        # - msgpack-python
         
-        - pyglet
+        - pyglet1.2 1.2alpha1
         - pyobjc-core
         - pyobjc-framework-qtkit
         - bdist_mpkg
