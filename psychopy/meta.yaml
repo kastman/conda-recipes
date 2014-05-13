@@ -33,13 +33,13 @@ requirements:
         # - msgpack-python
         
         - pyglet1.2 1.2alpha1
-        - pyobjc-core
-        - pyobjc-framework-qtkit
+        - pyobjc-core # [osx]
+        - pyobjc-framework-qtkit # [osx]
         - bdist_mpkg
         - pyserial
-        - iolabs
+        - iolabs # [not linux]
         - pyxid
-        - py2app
+        - py2app # [osx]
 
         - labjackpython
         - portaudio
@@ -73,13 +73,13 @@ requirements:
         # - msgpack-python
         
         - pyglet1.2 1.2alpha1
-        - pyobjc-core
-        - pyobjc-framework-qtkit
+        - pyobjc-core # [osx]
+        - pyobjc-framework-qtkit # [osx]
         - bdist_mpkg
         - pyserial
-        - iolabs
+        - iolabs # [not linux]
         - pyxid
-        - py2app
+        - py2app # [osx]
 
         - labjackpython
         - portaudio
