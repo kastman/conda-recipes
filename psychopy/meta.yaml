@@ -45,12 +45,11 @@ requirements:
         - portaudio
         
         # IOHub
-        # - pyobjc
         - psutil
         - pytables
         - numexpr
         - pil
-        # - parallel
+        - python-xlib # [linux]
         
         
     run:

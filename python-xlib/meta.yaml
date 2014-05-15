@@ -1,0 +1,28 @@
+package:
+  name: python-xlib
+  version: "0.14"
+
+source:
+    fn: python-xlib-0.14.tar.gz
+    url: http://downloads.sourceforge.net/project/python-xlib/python-xlib/0.14/python-xlib-0.14.tar.gz
+    md5: a038c2f410d8445f3fa8f6dcd45659c5
+
+build:
+    number: 0
+    script: python setup.py install
+
+requirements:
+    build:
+        - python
+
+    run:
+        - python
+
+test:
+    # imports:
+    # commands:
+    #     - tests/test.py
+
+about:
+    home: http://python-xlib.sourceforge.net/
+    summary: The Python X Library is intended to be a fully functional X client library for Python programs.
