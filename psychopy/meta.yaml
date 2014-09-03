@@ -3,9 +3,9 @@ package:
   version: "1.80.01dev"
 
 source:
-    # git_url: https://github.com/psychopy/psychopy
-    git_url: https://github.com/dschreij/psychopy.git
-    git_tag: pyglet-1.2alpha1
+    git_url: https://github.com/psychopy/psychopy
+    # git_url: https://github.com/dschreij/psychopy.git
+    # git_tag: pyglet-1.2alpha1
 
 build:
     number: 1
@@ -30,7 +30,8 @@ requirements:
         - greenlet
         - gevent
         - pyyaml
-        # - msgpack-python
+        - msgpack-python
+        - pyserial
         
         - pyglet1.2 1.2alpha1
         - pyobjc-core # [osx]
@@ -43,6 +44,8 @@ requirements:
 
         - labjackpython
         - portaudio
+        - pysoundcard
+        - pysoundfile
         
         # IOHub
         - psutil
@@ -50,8 +53,8 @@ requirements:
         - numexpr
         - pil
         - python-xlib # [linux]
-        
-        
+        # - opencv
+
     run:
         - python
         - numpy
@@ -69,8 +72,9 @@ requirements:
         - greenlet
         - gevent
         - pyyaml
-        # - msgpack-python
-        
+        - msgpack-python
+        - pyserial
+
         - pyglet1.2 1.2alpha1
         - pyobjc-core # [osx]
         - pyobjc-framework-qtkit # [osx]
@@ -83,6 +87,8 @@ requirements:
         - labjackpython
         - portaudio
         - pysoundcard
+        - pysoudfile
+        
         
         # IOHub
         # - pyobjc
@@ -90,6 +96,7 @@ requirements:
         - pytables
         - numexpr
         - pil
+        # - opencv
         
         # - parallel
 
