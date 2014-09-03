@@ -1,0 +1,12 @@
+diff -Naur x264-snapshot-20131217-2245-stable/configure x264-snapshot-20131217-2245-stable-fixed/configure
+--- configure	2013-12-17 16:45:07.000000000 -0500
++++ configure	2014-09-03 11:59:45.000000000 -0400
+@@ -466,7 +466,7 @@
+         ;;
+     darwin*)
+         SYS="MACOSX"
+-        CFLAGS="$CFLAGS -falign-loops=16"
++        CFLAGS="$CFLAGS"
+         libm="-lm"
+         if [ "$pic" = "no" ]; then
+             cc_check "" -mdynamic-no-pic && CFLAGS="$CFLAGS -mdynamic-no-pic"
