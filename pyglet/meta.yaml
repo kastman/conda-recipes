@@ -1,29 +1,52 @@
+# hat tip: github.com/kne/conda-recipes/pyglet
+
+# vi: sw=2 ts=2 sts=2 expandtab
+
 package:
-  name: pyglet1.2
-  version: "1.2alpha1"
+  name: pyglet
+  version: 1.2.4
 
 source:
-    fn: pyglet-1.2alpha1.zip
-    url: https://pyglet.googlecode.com/files/pyglet-1.2alpha1.zip
-    md5: 637c74d33cf8c76b60e9e68dca6a0795
+  hg_url: https://bitbucket.org/pyglet/pyglet
+  hg_tag: pyglet-1.2.4
 
 build:
-    number: 1
-    script: python setup.py install
+  number: 0
 
 requirements:
-    build:
-        - python
+  build:
+    - setuptools
+    - python
+  run:
+    - python
 
-    run:
-        - python
 
-test:
-    imports:
-        - pyglet
-    # commands:
-    #     - tests/test.py
+# Some odd tests here, not sure they're very useful or necessary, even:
+test: 
+  imports:
+    - pyglet
 
+  commands:
+    - cd $SRC_DIR
+    # tests have to be converted for py3k
+    - 2to3 -wW -n tests -j $CPU_COUNT  # [py3k]
+    
+    # and the tests also add $SRC_DIR to the path which has 2-only code in the
+    # pyglet package, so rename it for now
+    - mv pyglet _pyglet # [py3k and unix]
+    - ren pyglet _pyglet # [py3k and win]
+    - cd tests
+
+    # finally, run the non-interactive tests:
+    - python test.py top
+    - python test.py app
+    - python test.py graphics
+    - python test.py clock
+    - python test.py resource
+
+    # there are also a bunch of other interactive tests that we definitely
+    # shouldn't run here.
+  
 about:
-    home: http://www.pyglet.org/
-    summary: a cross-platform windowing and multimedia library for Python.
+  home: https://bitbucket.org/pyglet/pyglet/wiki/Home
+  license: BSD
