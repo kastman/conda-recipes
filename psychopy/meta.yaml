@@ -4,11 +4,9 @@ package:
 
 source:
     git_url: https://github.com/psychopy/psychopy
-    # git_url: https://github.com/dschreij/psychopy.git
-    # git_tag: pyglet-1.2alpha1
 
 build:
-    number: 1
+    # number: 1
     script: python setup.py install
 
 requirements:
@@ -33,7 +31,7 @@ requirements:
         - msgpack-python
         - pyserial
         
-        - pyglet1.2 1.2alpha1
+        - pyglet
         - pyobjc-core # [osx]
         - pyobjc-framework-qtkit # [osx]
         - bdist_mpkg
@@ -75,7 +73,7 @@ requirements:
         - msgpack-python
         - pyserial
 
-        - pyglet1.2 1.2alpha1
+        - pyglet
         - pyobjc-core # [osx]
         - pyobjc-framework-qtkit # [osx]
         - bdist_mpkg
@@ -87,7 +85,7 @@ requirements:
         - labjackpython
         - portaudio
         - pysoundcard
-        - pysoudfile
+        - pysoundfile
         
         
         # IOHub
@@ -99,13 +97,6 @@ requirements:
         # - opencv
         
         # - parallel
-
-test:
-    # Python imports
-    imports:
-        - psychopy
-    requires:
-        - pytest
 
 about:
     home: http://www.psychopy.org
