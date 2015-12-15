@@ -30,6 +30,7 @@ requirements:
         - pyyaml
         - msgpack-python
         - pyserial
+        - pandas
         
         - pyglet
         - pyobjc-core # [osx]
@@ -72,6 +73,7 @@ requirements:
         - pyyaml
         - msgpack-python
         - pyserial
+        - pandas
 
         - pyglet
         - pyobjc-core # [osx]
