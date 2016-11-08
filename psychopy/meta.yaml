@@ -100,6 +100,12 @@ requirements:
         
         # - parallel
 
+test:
+    # Python imports
+    imports:
+        - psychopy
+    requires:
+        - pytest
 about:
     home: http://www.psychopy.org
     license: GPL3
