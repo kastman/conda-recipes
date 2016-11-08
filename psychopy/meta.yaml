@@ -31,7 +31,7 @@ requirements:
         - msgpack-python
         - pyserial
         - pandas
-        
+
         - pyglet
         - pyobjc-core # [osx]
         - pyobjc-framework-qtkit # [osx]
@@ -45,7 +45,7 @@ requirements:
         - portaudio
         - pysoundcard
         - pysoundfile
-        
+
         # IOHub
         - psutil
         - pytables
@@ -88,8 +88,8 @@ requirements:
         - portaudio
         - pysoundcard
         - pysoundfile
-        
-        
+
+
         # IOHub
         # - pyobjc
         - psutil
@@ -97,9 +97,8 @@ requirements:
         - numexpr
         - pil
         # - opencv
-        
-        # - parallel
 
+        # - parallel
 test:
     # Python imports
     imports:
